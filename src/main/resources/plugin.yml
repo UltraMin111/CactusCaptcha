@@ -1,0 +1,4 @@
+name: CactusCaptcha
+version: '1.0-SNAPSHOT'
+main: a.cactusCaptcha.CactusCaptcha
+api-version: '1.18'

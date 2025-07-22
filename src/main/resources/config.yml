@@ -1,0 +1,50 @@
+# CactusCaptcha Configuration File
+# How often to challenge – every N cactus blocks
+placeEveryXBlocks: 1
+
+# Captcha settings
+captchaTimeoutSeconds: 15
+maxFailsPerSession: 3
+failPenaltyMinutes: 3
+
+# New retry limit and cooldown system
+captcha:
+  maxTries: 3
+  punishmentCooldownsMinutes: [3, 10, 60, 120]
+
+# Captcha timer system
+captchaTimer:
+  enabled: true
+  secondsBetweenCaptchas: 600
+
+# Periodic captcha system (10-minute placement-based checks)
+periodicCaptcha:
+  enabled: true
+  intervalSeconds: 600
+
+# Movement repetition detection system
+movement-repetition:
+  enabled: true
+  sample-size: 20                # last 20 movement packets
+  repeat-threshold: 0.75         # flag if ≥75% of movements are exact copies
+  suspicion-increase: 15         # increase suspicion score by 15%
+
+# Silent mode - disable all player notifications
+silentMode: true
+
+# Messages (ChatColor supported)
+messages:
+  start: "&eAnswer the question to continue!"
+  success: "&aCorrect!"
+  fail: "&cWrong answer!"
+  timeout: "&cTime's up!"
+  penalty: "&4Too many failures – blocked for %minutes%m."
+
+# MySQL database settings
+mysql:
+  enabled: false
+  host: localhost
+  port: 3306
+  database: cactuscaptcha
+  user: CactusMinecadia!@#
+  password: Animehassan12
